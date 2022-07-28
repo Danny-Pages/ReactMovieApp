@@ -7,22 +7,24 @@ class SearchBar extends Component {
   state = {
     value: "",
   };
-
-  //Must have this so we can reset it.
+  // Must have this here so we can reset it
   timeout = null;
 
   doSearch = (event) => {
+    // ES6 Destructuring prop
     const { callback } = this.props;
 
     this.setState({ value: event.target.value });
     clearTimeout(this.timeout);
-
+    // Set a timeout to wait for the user to stop writing
+    // So we don´t have to make unnessesary calls
     this.timeout = setTimeout(() => {
-      callback(false, this.state.value);
+      callback(this.state.value);
     }, 500);
   };
 
   render() {
+    // ES6 Destructuring state
     const { value } = this.state;
 
     return (

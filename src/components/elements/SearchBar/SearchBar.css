@@ -29,12 +29,12 @@
 .rmdb-searchbar-input {
   font-family: 'Abel', sans-serif;
   font-size: 38px;
-  position: relative;
-  margin: 8px 0 0 60px;
+  position: absolute;
+  left: 70px;
+  top: 7px;
   border: 0;
   background: transparent;
   height: 40px;
-  width: 90%;
   color: #fff;
 }
 
@@ -44,7 +44,6 @@
 
 @media screen and (max-width: 720px) {
   .rmdb-searchbar-input {
-    margin: 8px 0 0 60px;
     font-size: 28px;
     color: #fff;
   }

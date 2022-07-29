@@ -1,20 +1,25 @@
 {
   "name": "react_movie_db_course",
   "version": "0.1.0",
+  "homepage": "https://Danny-Pages.github.io",
   "private": true,
   "dependencies": {
     "browserslist": "^4.21.2",
+    "gh-pages": "^4.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-fontawesome": "^1.6.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "save-dev": "^0.0.1-security"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
